@@ -1,10 +1,15 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import styles from './Category.module.css';
 
-const Category = ({ imageUrl, title }) => {
+const Category = ({ imageUrl, title, linkUrl, history, match }) => {
+  console.log(match);
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+    >
       <div
         className={styles.image}
         style={{
@@ -21,4 +26,4 @@ const Category = ({ imageUrl, title }) => {
   );
 };
 
-export default Category;
+export default withRouter(Category);
