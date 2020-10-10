@@ -7,7 +7,7 @@ import CollectionItem from '../CollectionItem/CollectionItem';
 const Collections = ({ title, items }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className={styles.heading}>{title}</h1>
       <div className={styles.itemsContainer}>
         {items
           .filter((item, index) => index < 4)

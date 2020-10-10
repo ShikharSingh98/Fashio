@@ -1,4 +1,10 @@
 .itemsContainer {
   display: flex;
   justify-content: space-evenly;
+  margin: 4rem 0;
+}
+
+.heading {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
