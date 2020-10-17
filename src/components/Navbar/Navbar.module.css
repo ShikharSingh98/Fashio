@@ -41,4 +41,15 @@
 .navbarLink {
   text-decoration: none;
   color: black;
+  cursor: pointer;
+}
+
+.navbarButton {
+  background-color: #ef233c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
 }

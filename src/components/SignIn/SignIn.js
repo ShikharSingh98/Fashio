@@ -1,4 +1,5 @@
 import React from 'react';
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 import CustomButton from '../CustomButton/CustomButton';
 import FormInput from '../FormInput/FormInput';
 
@@ -51,6 +52,7 @@ class SignIn extends React.Component {
               text="Sign in with"
               type="branded"
               icon="https://img.icons8.com/color/48/000000/google-logo.png"
+              onClick={signInWithGoogle}
             />
           </div>
         </form>

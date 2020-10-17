@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import styles from './Category.module.css';
 
 const Category = ({ imageUrl, title, linkUrl, history, match }) => {
-  console.log(match);
   return (
     <div
       className={styles.container}

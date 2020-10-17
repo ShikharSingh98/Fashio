@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utils';
 
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ currentUser }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -17,14 +18,20 @@ const Navbar = () => {
         </Link>
         <div className={styles.navbarLinks}>
           <Link className={styles.navbarLink} to="/">
-            Home
+            HOME
           </Link>
           <Link className={styles.navbarLink} to="/shop">
             SHOP
           </Link>
-          <Link className={styles.navbarLink} to="/shop">
-            CONTACT US
-          </Link>
+          {currentUser ? (
+            <div className={styles.navbarButton} onClick={() => auth.signOut()}>
+              Sign Out
+            </div>
+          ) : (
+            <Link className={styles.navbarButton} to="/signin">
+              Sign in
+            </Link>
+          )}
         </div>
       </div>
     </div>
